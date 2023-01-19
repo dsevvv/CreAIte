@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
+      format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+body,
+input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  background: #121212;
+}
+.icon {
+  width: 256px;
+}
+.highlight {
+  color: #10a37f;
+}
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 16px 0 40px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+input[type="text"] {
+  padding: 12px 16px;
+  border: 1px solid #10a37f;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+::placeholder {
+  color: #8e8ea0;
+  opacity: 1;
+}
+input[type="submit"] {
+  padding: 12px 0;
+  color: #fff;
+  background-color: #10a37f;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+select {
+  background-color: #f2f2f2;
+  font-size: 16px;
+  color: #000000;
+  width: 155px;
+}
+.selects {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.result {
+  font-weight: bold;
+  margin-top: 40px;
+}
+.photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .photo {
+    margin: 16px;
+    border: 1px solid #fff;
+    /* Add some hover effect */
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .photo:hover {
+    transform: scale(1.1);
+  }
+
+  /* Add a class for the selected photo */
+  .selected {
+    position: relative;
+    border: 2px solid #087c5f;
+    transform: scale(0.994); /* decrease the scale slightly to account for the border */
+  }
+@media (max-width: 768px) {
+  .photo {
+    margin-bottom: 5px;
+    width: 254px;
+    height: 254px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #ffffff;
+  }
+  input {
+    color: #ffffff;
+    background: #202020;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fafafa;
+    color: #000000;
+  }
+  input {
+    color: #000000;
+    background: #ffffff;
+  }
+  h3 {
+    color: #000000;
+  }
+}
+
