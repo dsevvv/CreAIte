@@ -15,7 +15,7 @@ openai.Model.retrieve("text-davinci-003")
 
 
 @views.route("/", methods=("GET", "POST"))
-def index():
+def home():
     if request.method == "POST":
         prompt = request.form["animal"]
         resolution = request.form["resolution"]

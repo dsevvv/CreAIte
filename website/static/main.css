@@ -38,7 +38,7 @@ h3 {
   line-height: 40px;
   font-weight: bold;
   color: #ffffff;
-  margin: 16px 0 40px;
+  margin: 16px 0 20px;
 }
 form {
   display: flex;
@@ -64,10 +64,14 @@ input[type="submit"] {
   text-align: center;
   cursor: pointer;
 }
+input[type="submit"]:hover {
+  background-color: #0f8e6e;
+  color: #121212;
+}
 select {
   background-color: #f2f2f2;
   font-size: 16px;
-  color: #000000;
+  color: #121212;
   width: 155px;
 }
 nav {
@@ -75,6 +79,30 @@ nav {
   top: 0;
   right: 0;
   margin-top: 15px;
+}
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #10a37f;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+button[type="submit"] {
+  width: 100%;
+  background-color: #10a37f;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-group {
+  margin-bottom: 20px;
 }
 .login-button {
   background-color: #10a37f;
@@ -91,7 +119,7 @@ nav {
 .selects {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 .result {
   font-weight: bold;
@@ -126,8 +154,19 @@ nav {
     color: #ffffff;
   }
   input {
-    color: #ffffff;
+    color: #121212;
     background: #202020;
+  }
+  form {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #121212;
+  border-radius: 4px;
+  }
+  label {
+  color: #ffffff;
+  font-weight: bold;
   }
   .sign-up{
     padding: 3px 15px;
@@ -169,30 +208,41 @@ nav {
 @media (prefers-color-scheme: light) {
   body {
     background: #fafafa;
-    color: #000000;
+    color: #121212;
   }
   input {
-    color: #000000;
+    color: #121212;
     background: #ffffff;
   }
   h3 {
-    color: #000000;
+    color: #121212;
+  }
+  form {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 4px;
+  }
+  label {
+  color: #121212;
+  font-weight: bold;
   }
   .sign-up{
     padding: 3px 15px;
-    color: #000000;
+    color: #121212;
     text-decoration: none;
     font-size: 10px;
   }
   .sign-up:visited{
-      color: #000000;
+      color: #121212;
   }
   .sign-up:hover{
       color: #10a37f;
   }
   .photo {
     margin: 16px;
-    border: 1px solid #000000;
+    border: 1px solid #121212;
     /* Add some hover effect */
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
@@ -202,5 +252,36 @@ nav {
     position: relative;
     border: 1px solid #087c5f;
   }
+  .home{
+    padding: 3px 15px;
+    color: #121212;
+    text-decoration: none;
+    font-size: 10px;
+  }
+  .home:visited{
+      color: #121212;
+  }
+  .home:hover{
+      color: #10a37f;
+  }
+}
+
+#container {
+    overflow:hidden;
+    position:relative;
+}
+#hideMe {
+    -webkit-animation: cssAnimation 2s forwards;
+    animation: cssAnimation 2s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    60%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    60%  {opacity: 1;}
+    100% {opacity: 0;}
 }
 

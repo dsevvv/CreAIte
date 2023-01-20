@@ -12,14 +12,18 @@
             <option value="512x512">512x512</option>
             <option value="1024x1024">1024x1024</option>
         </select>
-        <select name="count"required>
+        <select name="count" required>
             <option value="1">1 Photo</option>
             <option value="2">2 Photos</option>
             <option value="3">3 Photos</option>
             <option value="4">4 Photos</option>
         </select>
     </div>
+    {% if current_user.is_authenticated %}
     <input type="submit" value="Generate Image" />
+    {% else %}
+    <input type="submit" value="Login to Generate" disabled />
+    {% endif %}
 </form>
 <br>
 <div class="photos">
