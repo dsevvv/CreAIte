@@ -1,9 +1,4 @@
-import requests
-import os
-
-from python.main.printify_client import PrintifyClient
-from python.main.printify_photo import *
-from python.main.printify_product import *
+from website.printify_product import *
 
 def main():
     delete_all_products()

@@ -70,6 +70,24 @@ select {
   color: #000000;
   width: 155px;
 }
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 15px;
+}
+.login-button {
+  background-color: #10a37f;
+  color: white;
+  padding: 3px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 10px;
+}
+.login-button:hover {
+  background-color: #40c9a7;
+  color: #121212;
+}
 .selects {
   display: flex;
   justify-content: space-between;
@@ -85,25 +103,16 @@ select {
     align-items: center;
     flex-wrap: wrap;
   }
-
-  .photo {
-    margin: 16px;
-    border: 1px solid #fff;
-    /* Add some hover effect */
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-  }
-
-  .photo:hover {
-    transform: scale(1.1);
-  }
-
-  /* Add a class for the selected photo */
-  .selected {
-    position: relative;
-    border: 2px solid #087c5f;
-    transform: scale(0.994); /* decrease the scale slightly to account for the border */
-  }
+.photo {
+  margin: 16px;
+  border: 2px solid #fff;
+  /* Add some hover effect */
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.photo:hover {
+  transform: scale(1.1);
+}
 @media (max-width: 768px) {
   .photo {
     margin-bottom: 5px;
@@ -120,6 +129,42 @@ select {
     color: #ffffff;
     background: #202020;
   }
+  .sign-up{
+    padding: 3px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+  }
+  .sign-up:visited{
+    color: #ffffff;
+  }
+  .sign-up:hover{
+    color: #10a37f;
+  }
+  .photo {
+    margin: 16px;
+    border: 1px solid #fff;
+    /* Add some hover effect */
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  /* Add a class for the selected photo */
+  .selected {
+    position: relative;
+    border: 1px solid #087c5f;
+  }
+  .home{
+    padding: 3px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+  }
+  .home:visited{
+      color: #ffffff;
+  }
+  .home:hover{
+      color: #10a37f;
+  }
 }
 @media (prefers-color-scheme: light) {
   body {
@@ -132,6 +177,30 @@ select {
   }
   h3 {
     color: #000000;
+  }
+  .sign-up{
+    padding: 3px 15px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 10px;
+  }
+  .sign-up:visited{
+      color: #000000;
+  }
+  .sign-up:hover{
+      color: #10a37f;
+  }
+  .photo {
+    margin: 16px;
+    border: 1px solid #000000;
+    /* Add some hover effect */
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  /* Add a class for the selected photo */
+  .selected {
+    position: relative;
+    border: 1px solid #087c5f;
   }
 }
 

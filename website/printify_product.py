@@ -1,4 +1,4 @@
-from python.main.printify_photo import *
+from website.printify_photo import *
 
 client = requests.Session()
 printify_client = PrintifyClient(client, os.getenv("PRINTIFY_ACCESS_TOKEN"))

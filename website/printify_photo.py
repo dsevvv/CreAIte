@@ -1,6 +1,6 @@
 import requests
 import os
-from python.main.printify_client import PrintifyClient
+from website.printify_client import PrintifyClient
 from dotenv import load_dotenv
 
 load_dotenv()
