@@ -1,9 +1,14 @@
 from website.printify_product import *
 
+
 def main():
-    delete_all_products()
-    # client = requests.Session()
-    # printify_client = PrintifyClient(client, os.getenv("PRINTIFY_ACCESS_TOKEN"))
+    client = requests.Session()
+    printify_client = PrintifyClient(client, os.getenv("PRINTIFY_ACCESS_TOKEN"))
+    iphone_14_case_id = 269
+    print_provider_id = 1
+    blueprint_uri = f'https://api.printify.com/v1/catalog/blueprints/{iphone_14_case_id}/print_providers/{print_provider_id}/variants.json'
+    blueprint_response = printify_client.request('GET', blueprint_uri)
+    print(blueprint_response)
     # shop_id = os.getenv("PRINTIFY_SHOP_ID")  # AI clothing store
     # product_id = "63b4dd24bb1cdce32201de42"  # random dude socks
     # kid_t_shirt_id = 3

@@ -1,0 +1,9 @@
+blueprint_id: 269
+print_provider_id: 1
+variants:
+	iphone 14: 		93905
+	iphone 14 pro:		93906
+	iphone 14 plus:		93908
+	iphone 14 pro max:	93907
+	
+	

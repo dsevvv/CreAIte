@@ -19,10 +19,12 @@
             <option value="4">4 Photos</option>
         </select>
     </div>
-    {% if current_user.is_authenticated %}
+    {% if current_user.is_authenticated and current_user.confirmed_email %}
     <input type="submit" value="Generate Image" />
-    {% else %}
+    {% elif not current_user.is_authenticated %}
     <input type="submit" value="Login to Generate" disabled />
+    {% else %}
+    <input type="submit" value="Confirm Email to Generate" disabled />
     {% endif %}
 </form>
 <br>
@@ -49,6 +51,10 @@
 {% endif %}
 {% if result %}
 <div class="result">{{ result }}</div>
+{% endif %}
+{% if product_image %}
+<br>
+<img src="{{ product_image }}" alt="Product Image" width="600" height="600">
 {% endif %}
 
 <script>

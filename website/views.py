@@ -4,10 +4,10 @@ import random
 import string
 
 from flask import Blueprint
-from flask import Flask, render_template, request
+from flask import render_template, request
 
 from website.printify_photo import upload_image
-from website.printify_product import create_product
+from website.printify_product import create_product, get_product
 
 views = Blueprint('views', __name__)
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -59,8 +59,10 @@ def image_publish():
     # upload image with random 20 str filename
     print(request.form["image_url"])
     image_id = upload_image(file_name=generate_random_string(20), url=request.form["image_url"])
-    create_product(blueprint_id=3, print_provider_id=74, image_id=image_id)
-    return render_template("home.html", result="Product published!")
+    # create_product(blueprint_id=3, print_provider_id=74, image_id=image_id)
+    product_id = create_product(blueprint_id=269, print_provider_id=1, variant_id=93905, image_id=image_id)
+    product = get_product(product_id)
+    return render_template("home.html", result="Product published!", product_image=product['images'][1]['src'])
 
 
 def generate_random_string(length):

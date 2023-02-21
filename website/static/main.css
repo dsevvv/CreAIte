@@ -271,8 +271,8 @@ button[type="submit"] {
     position:relative;
 }
 #hideMe {
-    -webkit-animation: cssAnimation 2s forwards;
-    animation: cssAnimation 2s forwards;
+    -webkit-animation: cssAnimation 3s forwards;
+    animation: cssAnimation 3s forwards;
 }
 @keyframes cssAnimation {
     0%   {opacity: 1;}

@@ -8,6 +8,7 @@ BASE_URI = os.getenv("PRINTIFY_BASE_URI")
 CLIENT = requests.Session()
 PRINTIFY_CLIENT = PrintifyClient(CLIENT, os.getenv("PRINTIFY_ACCESS_TOKEN"))
 
+
 # upload image to printify, returns image id
 def upload_image(file_name=str, url=str):
     image_upload_uri = f'{BASE_URI}/uploads/images.json'

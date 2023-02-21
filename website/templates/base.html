@@ -20,9 +20,9 @@
       {% endif %}
       <a href="/" class ="home" style="float:left; margin-right:10px;">Home</a>
     </nav>
+    {% block content %} {% endblock %}
     {% for mesg in get_flashed_messages() %}
       <div id='hideMe'><h1>{{ mesg }}</h1></div>
     {% endfor %}
-    {% block content %} {% endblock %}
   </body>
 </html>
